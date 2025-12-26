@@ -23,7 +23,7 @@ This project focuses on:
 - Delivering static content over TCP  
 - Handling common HTTP status codes such as 200 OK and 404 Not Found  
 
-Advanced features such as HTTPS, encryption, concurrency, and databases are intentionally excluded to keep the focus on core networking concepts.
+Advanced features such as HTTPS, encryption, concurrency, and database integration are intentionally excluded so that the experiment remains focused on understanding the fundamental working of the HTTP protocol over raw TCP sockets without additional abstraction layers.
 
 
 ## How the Server Works
@@ -47,15 +47,41 @@ Simple-HTTP-Web-Server/
 └── .gitignore
 ```
 
-
----
-
 ## How to Run
 
 1. Open terminal in the project directory.
 2. Run the server:
-
+```
 python server.py
+```
+3. Open a browser and go to:
+http://127.0.0.1:8080/
+
+## Example Output
+
+**Server Terminal**
+```
+HTTP Server running at http://127.0.0.1:8080
+Connection from ('127.0.0.1', 52640)
+```
+
+
+**Browser Output**
+
+The `index.html` file is displayed in the browser.
+
+## Key Concepts Demonstrated
+
+- TCP socket creation and binding  
+- HTTP request parsing  
+- MIME type detection  
+- HTTP response formatting  
+- Static file serving  
+- Application layer communication over TCP/IP  
+
+## Conclusion
+
+This experiment demonstrates how a basic web server works internally without using any frameworks. It provides a clear understanding of how browsers communicate with servers and how HTTP operates at the socket level.
 
 
 
